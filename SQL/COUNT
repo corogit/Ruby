@@ -1,0 +1,17 @@
+-- データ件数を表示する
+SELECT COUNT(*) FROM users;
+
+--条件に合ったデータの件数を表示する
+SELECT COUNT(*) FROM users WHERE user_id = 6;
+
+-- データを並び替えて取得する
+SELECT * FROM users ORDER BY age;
+
+-- データを並び替えて取得する 逆順
+SELECT * FROM users ORDER BY age DESC;
+
+--上位3件だけ表示す
+SELECT * FROM users ORDER BY age DESC LIMIT 3;
+
+-- 職業ごとに人数を集計する
+SELECT job_id, COUNT(*) FROM users GROUP BY job_id;
